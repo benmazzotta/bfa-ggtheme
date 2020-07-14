@@ -22,7 +22,9 @@ library(ggthemes)
 library(extrafont)
 library(ggpubr)
 # theme_set(theme_hc()) +
-ggplot2::theme_set(theme_economist_white(gray_bg = FALSE)) +
+
+theme_bfa <- function() {
+  ggplot2::theme_set(ggthemes::theme_economist_white(gray_bg = FALSE)) +
   # theme_set(theme_fivethirtyeight()) +
   ggplot2::theme_update(text=element_text(family="Century Gothic", color="#333333"),
                panel.grid.major.y = element_line(size=.1, colour = "#EBEBEB"),
@@ -61,3 +63,4 @@ bfa_rag4 = bfa_colors[c(1:3, 5)]
 bfa_primarygray = bfa_colors[c(1,5:8)]
 bfa_ambergray = bfa_colors[c(2,5:8)]
 bfa_orangegray = bfa_colors[c(3,5:8)]
+}
