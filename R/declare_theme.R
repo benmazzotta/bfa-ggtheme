@@ -48,7 +48,7 @@ theme_bfa <- function() {
   )
 
 # library(grDevices)
-bfa_colors = c(grDevices::rgb(2/255, 175/255, 170/255), # Primary
+bfa_colors <<- c(grDevices::rgb(2/255, 175/255, 170/255), # Primary
                grDevices::rgb(252/255, 190/255, 14/255), # Amber
                grDevices::rgb(217/255, 88/255, 19/255), # Orange
                grDevices::rgb(206/255, 233/255, 235/255), # Supporting
@@ -58,9 +58,9 @@ bfa_colors = c(grDevices::rgb(2/255, 175/255, 170/255), # Primary
                grDevices::rgb(235/255, 235/255, 235/255) # Neutral 4
 )
 
-bfa_palette <- function(n_colors=3) {ggpubr::get_palette(bfa_colors[c(1:3)], n_colors)}
-bfa_rag4 = bfa_colors[c(1:3, 5)]
-bfa_primarygray = bfa_colors[c(1,5:8)]
-bfa_ambergray = bfa_colors[c(2,5:8)]
-bfa_orangegray = bfa_colors[c(3,5:8)]
+bfa_palette <<- function(n_colors=3) {ggpubr::get_palette(bfa_colors[c(1:3)], n_colors)}
+bfa_rag4 <<- bfa_colors[c(1:3, 5)]
+bfa_primarygray <<- bfa_colors[c(1,5:8)]
+bfa_ambergray <<- bfa_colors[c(2,5:8)]
+bfa_orangegray <<- bfa_colors[c(3,5:8)]
 }
