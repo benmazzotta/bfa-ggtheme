@@ -24,7 +24,7 @@ bfaggtheme_copyrightnotice <- function() {
 # theme_set(theme_hc()) +
 
 theme_bfa <- function() {
-  extrafont::loadfonts()
+  invisible(try(extrafont::loadfonts("all", quiet=TRUE), silent=TRUE))
   ggplot2::theme_set(ggthemes::theme_economist_white(gray_bg = FALSE)) +
   # theme_set(theme_fivethirtyeight()) +
   ggplot2::theme_update(text= ggplot2::element_text(family="Century Gothic", color="#333333"),
