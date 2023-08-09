@@ -28,7 +28,7 @@ theme_bfa <- function() {
   ggplot2::theme_set(ggthemes::theme_economist_white(gray_bg = FALSE)) +
   # theme_set(theme_fivethirtyeight()) +
   ggplot2::theme_update(text= ggplot2::element_text(family="Century Gothic", color="#333333"),
-               panel.grid.major.y = ggplot2::element_line(size=.1, colour = "#EBEBEB"),
+               panel.grid.major.y = ggplot2::element_line(linewidth=.1, colour = "#EBEBEB"),
                axis.text.x = ggplot2::element_text(size=8, color="grey15",  margin=ggplot2::margin(8,8,8,8, "pt"), face="bold"),
                axis.text.y = ggplot2::element_text(size=8, color="grey15", margin=ggplot2::margin(8,0,8,0, "pt"), face="bold"),
                axis.title.x = ggplot2::element_text(size=10, color="grey15", margin=ggplot2::margin(8,8,8,8, "pt")),
